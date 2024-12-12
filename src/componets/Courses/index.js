@@ -1,4 +1,7 @@
-import './Courses.css'
+import styles from './Courses.module.css';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
 
 const courses = [
     {
@@ -30,15 +33,15 @@ const courses = [
 
 function Courses() {
     const htmls = courses.map((course, index) => (
-        <div key={index} className="course">
-            <span className="course__wrap-img">
-                <img src={course.thumb} className="course-thumb" />
+        <div key={index} className={cx('course')}>
+            <span className={cx('course__wrap-img')}>
+                <img src={course.thumb} className={cx('course-thumb')} alt={course.name} />
             </span>
 
-            <span className="course__wrap-title">
-                <a className="course__name-learned">{course.name}</a>
-                <p className="course__time-learned">{course.time}</p>
-                <div className="course__elapsed"></div>
+            <span className={cx('course__wrap-title')}>
+                <a className={cx('course__name-learned')}>{course.name}</a>
+                <p className={cx('course__time-learned')}>{course.time}</p>
+                <div className={cx('course__elapsed')}></div>
             </span>
         </div>
     ));
@@ -46,4 +49,4 @@ function Courses() {
     return htmls;
 }
 
-export default Courses
+export default Courses;

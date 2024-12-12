@@ -1,16 +1,17 @@
-import './HeaderLeftPage.css'
+import styles from './HeaderLeftPage.module.css';
 
 function HeaderLeftPage() {
     return (
-        <div className="header-left-page">
+        <div className={styles['header-left-page']}>
             <h1>
                 <a href="/">
                     <img
                         src="https://fullstack.edu.vn/assets/f8-icon-lV2rGpF0.png"
-                        className="logo"
+                        className={styles.logo}
+                        alt="Logo"
                     />
                 </a>
-                <a href="/" className="target">
+                <a href="/" className={styles.target}>
                     Học Lập Trình Để Đi Làm
                 </a>
             </h1>
@@ -18,4 +19,4 @@ function HeaderLeftPage() {
     );
 }
 
-export default HeaderLeftPage
+export default HeaderLeftPage;

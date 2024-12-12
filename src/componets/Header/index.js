@@ -1,12 +1,15 @@
-import './Header.css'
+import styles from './Header.module.css';
+import classNames from 'classnames/bind';
 import HeaderLeftPage from '../HeaderLeftPage';
 import HeaderCenterPage from '../HeaderCenterPage';
 import HeaderRightPage from '../HeaderRightPage';
 
+const cx = classNames.bind(styles);
+
 function Header() {
     return (
-        <div className="wrapper">
-            <div className="header grid wide">
+        <div className={cx('wrapper')}>
+            <div className={cx('header', 'grid', 'wide')}>
                 {HeaderLeftPage()}
                 {HeaderCenterPage()}
                 {HeaderRightPage()}
@@ -15,4 +18,4 @@ function Header() {
     );
 }
 
-export default Header
+export default Header;

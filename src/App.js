@@ -3,11 +3,25 @@ import classNames from 'classnames/bind';
 
 import './App.css';
 import Header from './componets/Header';
+import Grid from './componets/Grid';
 
 // const cx = classNames.bind(styles)
 
+function Container() {
+    return (
+        <div className='container'></div>
+    )
+}
+
 function App() {
-    return <div className="App">{Header()}</div>;
+    return (
+        <Grid>
+            <div className="App">
+                {Header()}
+                {Container()}
+            </div>
+        </Grid>
+    )
 }
 
 export default App;
