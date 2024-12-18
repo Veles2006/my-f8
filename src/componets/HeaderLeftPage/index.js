@@ -12,7 +12,7 @@ function HeaderLeftPage() {
                     />
                 </a>
                 <a href="/" className={styles.target}>
-                    Học Lập Trình Để Đi Làm
+                    <span>Học Lập Trình Để Đi Làm</span>
                 </a>
             </h1>
         </div>

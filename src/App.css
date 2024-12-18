@@ -8,24 +8,166 @@
     font-size: 62.5%;
 } */
 
-.grid {
-    width: 100%;
-    display: block;
-    padding: 0;
-}
-
-.grid.wide {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .wrapper {
     width: 100%;
     height: 66px;
     border-bottom: 1px solid #dadada;
 }
 
+/* Container */
 
+.container {
+    display: flex;
+}   
 
+.container__wrapper {
+    position: relative;
+    top: 66px;
+}
 
+.sidebar-wrapper {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+}
 
+.sidebar {
+    position: sticky;
+    top: 66px;
+    height: calc(100vh - 66px);
+    margin-left: -16px;
+    z-index: 1;
+}
+
+.sidebar__navigations {
+    position: absolute;
+    top: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__navigation {
+    list-style: none;
+}
+
+.sidebar__navigation--active a:first-child {
+    background-color: #e8ebed;
+    opacity: 1;
+}
+
+.sidebar__navigation a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    opacity: 0.8;
+    color: #000;
+    text-decoration: none;
+}
+
+.sidebar__navigation:hover a {
+    background-color: #e8ebed;
+    opacity: 1;
+}
+
+.sidebar__navigation svg {
+    font-size: 18px;
+}
+
+.sidebar__navigation span {
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.sidebar__notice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 22px;
+    bottom: 66px;
+    width: 42px;
+    height: 42px;
+    background-color: #f0f0f0cc;
+    border-radius: 50%;
+}
+
+.sidebar__notice svg {
+    font-size: 16px;
+}
+
+.container-content {
+    /* background: blue;
+    height: 1000px; */
+}
+
+/* Carousel */
+
+.carousel {
+    height: calc(100vh - 66px);
+}
+
+.carousel__img {
+
+}
+
+.carousel__nav-control {
+
+}
+
+.carousel__indicators {
+
+}
+
+.course-list {
+
+}
+
+.course-list__name {
+
+}
+
+.course-list__content {
+
+}
+
+.course-item {
+
+}
+
+.course-item__img {
+
+}
+
+.course-item__info {
+
+}
+
+.course-name {
+
+}
+
+.course-price {
+
+}
+
+.course-footer {
+
+}
+
+.course-author {
+
+}
+
+.course-time {
+
+}
+
+.show-all {
+
+}
