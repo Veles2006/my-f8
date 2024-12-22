@@ -1,0 +1,169 @@
+{
+    "paidCourses": [
+        {
+            "id": 1,
+            "name": "HTML CSS Pro",
+            "image": "https://files.fullstack.edu.vn/f8-prod/courses/15/62f13d2424a47.png",
+            "price": {
+                "old": "2.500.000đ",
+                "main": "1.299.000đ"
+            },
+            "author": {
+                "name": "Sơn Đặng",
+                "avatar": "https://fullstack.edu.vn/images/founder.jpeg"
+            },
+            "duration": "116h48p",
+            "url": "/",
+            "icon": "faClock"
+        },
+        {
+            "id": 2,
+            "name": "Ngôn ngữ Sass",
+            "image": "https://files.fullstack.edu.vn/f8-prod/courses/27/64e184ee5d7a2.png",
+            "price": {
+                "old": "400.000đ",
+                "main": "299.000đ"
+            },
+            "author": {
+                "name": "Sơn Đặng",
+                "avatar": "https://fullstack.edu.vn/images/founder.jpeg"
+            },
+            "duration": "6h18px",
+            "url": "/",
+            "icon": "faClock"
+        },
+        {
+            "id": 3,
+            "name": "JavaScript Pro",
+            "image": "https://files.fullstack.edu.vn/f8-prod/courses/19/66aa28194b52b.png",
+            "price": {
+                "old": "3.299.000đ",
+                "main": "1.399.000đ"
+            },
+            "author": {
+                "name": "Sơn Đặng",
+                "avatar": "https://fullstack.edu.vn/images/founder.jpeg"
+            },
+            "duration": "26h5p",
+            "url": "/",
+            "icon": "faClock"
+        }
+    ],
+
+    "freeCourses": [
+        {
+            "id": 1,
+            "name": "Kiến Thức Nhập Môn IT",
+            "image": "https://files.fullstack.edu.vn/f8-prod/courses/7.png",
+            "price": "Miễn phí",
+            "members": "132.090",
+            "duration": "3h12p",
+            "url": "/",
+            "icon": "faClock"
+        },
+        {
+            "id": 2,
+            "name": "Lập trình C++ cơ bản, nâng cao",
+            "image": "https://files.fullstack.edu.vn/f8-prod/courses/21/63e1bcbaed1dd.png",
+            "price": "Miễn phí",
+            "members": "31.979",
+            "duration": "10h18p",
+            "url": "/",
+            "icon": "faClock"
+        },
+        {
+            "id": 3,
+            "name": "HTML CSS từ Zero đến Hero",
+            "image": "https://files.fullstack.edu.vn/f8-prod/courses/2.png",
+            "price": "Miễn phí",
+            "members": "204.672",
+            "duration": "29h5p",
+            "url": "/",
+            "icon": "faClock"
+        },
+        {
+            "id": 4,
+            "name": "Responsive Với Grid System",
+            "image": "https://files.fullstack.edu.vn/f8-prod/courses/3.png",
+            "price": "Miễn phí",
+            "members": "45.977",
+            "duration": "6h31p",
+            "url": "/",
+            "icon": "faClock"
+        },
+        {
+            "id": 5,
+            "name": "Lập Trình JavaScript Cơ Bản",
+            "image": "https://files.fullstack.edu.vn/f8-prod/courses/1.png",
+            "price": "Miễn phí",
+            "members": "142.836",
+            "duration": "24h15p",
+            "url": "/",
+            "icon": "faClock"
+        },
+        {
+            "id": 6,
+            "name": "Lập Trình JavaScript Nâng Cao",
+            "image": "https://files.fullstack.edu.vn/f8-prod/courses/12.png",
+            "price": "Miễn phí",
+            "members": "39.302",
+            "duration": "8h41p",
+            "url": "/",
+            "icon": "faClock"
+        },
+        {
+            "id": 7,
+            "name": "Làm việc với Terminal & Ubuntu",
+            "image": "https://files.fullstack.edu.vn/f8-prod/courses/14/624faac11d109.png",
+            "price": "Miễn phí",
+            "members": "19.605",
+            "duration": "4h59p",
+            "url": "/",
+            "icon": "faClock"
+        },
+        {
+            "id": 8,
+            "name": "Xây Dựng Website với ReactJS",
+            "image": "https://files.fullstack.edu.vn/f8-prod/courses/13/13.png",
+            "price": "Miễn phí",
+            "members": "71.546",
+            "duration": "27h32p",
+            "url": "/",
+            "icon": "faClock"
+        },
+        {
+            "id": 9,
+            "name": "Node & ExpressJS",
+            "image": "https://files.fullstack.edu.vn/f8-prod/courses/6.png",
+            "price": "Miễn phí",
+            "members": "45.544",
+            "duration": "12h8p",
+            "url": "/",
+            "icon": "faClock"
+        },
+        {
+            "id": 1,
+            "name": "App \"Đừng Chạm Tay Lên Mặt\"",
+            "image": "https://files.fullstack.edu.vn/f8-prod/courses/4/61a9e9e701506.png",
+            "price": "Miễn phí",
+            "members": "10.432",
+            "duration": "1h34p",
+            "url": "/",
+            "icon": "faClock"
+        }
+    ],
+
+    "names": [
+        {
+            "id": 1,
+            "courseListName": "Khoá Học Pro",
+            "url": "/"
+        },
+        {
+            "id": 2,
+            "courseListName": "Khoá học miễn phí",
+            "url": "/",
+            "showAll": "Xem lộ trình >"
+        }
+    ]
+}

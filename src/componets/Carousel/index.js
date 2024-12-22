@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 import 'slick-carousel/slick/slick.css';
@@ -14,6 +14,7 @@ import {
 
 const cx = classNames.bind(styles);
 
+// Styled Components
 const CarouselWrapper = styled.div`
     position: relative;
     top: 16px;
@@ -24,9 +25,10 @@ const SlidePosition = styled.div`
     display: flex;
     justify-content: flex-start;
     margin-top: 16px;
+    margin-left: 40px;
 
     .dot {
-        width: 30px;
+        width: 34px;
         height: 8px;
         background-color: #dce0e3;
         margin: 0 4px;
@@ -35,7 +37,7 @@ const SlidePosition = styled.div`
         cursor: pointer;
 
         &.active {
-            width: 50px;
+            width: 54px;
             background-color: #9aa6af;
         }
     }
@@ -54,7 +56,6 @@ const CustomArrow = styled.button`
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
     color: #000;
     border: none;
-    padding: 10px;
     cursor: pointer;
     z-index: 1;
     border-radius: 50%;
@@ -80,14 +81,14 @@ const CustomArrow = styled.button`
 const Slide = styled.div`
     display: flex;
     height: 270px;
-    background: ${(props) => props.background || '#ccc'};
+    background: ${({ background }) => background || '#ccc'};
     border-radius: 10px;
     color: #fff;
 `;
 
 const Carousel = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
-    let sliderRef = React.createRef();
+    const sliderRef = useRef(null);
 
     const slides = [
         {
@@ -126,6 +127,42 @@ const Carousel = () => {
             background:
                 'linear-gradient(to right, rgb(104, 40, 250), rgb(255, 186, 164))',
         },
+        {
+            title: 'Học ReactJS Miễn Phí!',
+            paragraph:
+                'Khóa học ReactJS từ cơ bản tới nâng cao. Kết quả của khóa học này là bạn có thể làm hầu hết các dự án thường gặp với ReactJS.',
+            button: 'ĐĂNG KÝ NGAY',
+            image: 'https://files.fullstack.edu.vn/f8-prod/banners/Banner_web_ReactJS.png',
+            background:
+                'linear-gradient(to right, rgb(40, 119, 250), rgb(103, 23, 205))',
+        },      
+        {
+            title: 'Thành Quả của Học Viên',
+            paragraph:
+                'Để đạt được kết quả tốt trong mọi việc ta cần xác định mục tiêu rõ ràng cho việc đó. Học lập trình cũng không là ngoại lệ.',
+            button: 'ĐĂNG KÝ KÊNH',
+            image: 'https://files.fullstack.edu.vn/f8-prod/banners/Banner_01_2.png',
+            background:
+                'linear-gradient(to right, rgb(118, 18, 255), rgb(5, 178, 255))',
+        },
+        {
+            title: 'F8 trên Youtube',
+            paragraph:
+                'F8 được nhắc tới ở mọi nơi, ở đâu có cơ hội việc làm cho nghề IT và có những con người yêu thích lập trình F8 sẽ ở đó.',
+            button: 'THAM GIA NHÓM',
+            image: 'https://files.fullstack.edu.vn/f8-prod/banners/Banner_03_youtube.png',
+            background:
+                'linear-gradient(to right, rgb(254, 33, 94), rgb(255, 148, 2))',
+        },
+        {
+            title: 'F8 trên Facebook',
+            paragraph:
+                'F8 được nhắc tới ở mọi nơi, ở đâu có cơ hội việc làm cho nghề IT và có những con người yêu thích lập trình F8 sẽ ở đó.',
+            button: 'XEM THÀNH QUẢ',
+            image: 'https://files.fullstack.edu.vn/f8-prod/banners/Banner_04_2.png',
+            background:
+                'linear-gradient(to right, rgb(0, 126, 254), rgb(6, 195, 254))',
+        }
     ];
 
     const PrevArrow = (props) => (
@@ -186,7 +223,9 @@ const Carousel = () => {
                 {slides.map((_, index) => (
                     <div
                         key={index}
-                        className={cx('dot', { active: index === currentSlide })}
+                        className={cx('dot', {
+                            active: index === currentSlide,
+                        })}
                         onClick={() => handleDotClick(index)}
                     ></div>
                 ))}

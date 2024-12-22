@@ -5,8 +5,9 @@ import './App.css';
 import Header from './componets/Header';
 import Grid from './componets/Grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBullhorn, faHouse, faNewspaper, faRoad } from '@fortawesome/free-solid-svg-icons';
+import { faBullhorn, faClock, faHouse, faNewspaper, faRoad } from '@fortawesome/free-solid-svg-icons';
 import Caroulsel from './componets/Carousel'
+import CourseList from './componets/CourseList';
 
 // const cx = classNames.bind(styles)
 
@@ -51,24 +52,8 @@ function Container() {
 
                     <Caroulsel />
     
-                    <div className='course-list'>
-                        <div className='course-list__name'></div>
-                        <div className='course-list__content'>
-                            <div className='course-item'>
-                                <div className='course-item__img'></div>
-                                <div className='course-item__info'>
-                                    <div className='course-name'></div>
-                                    <div className='course-price'></div>
-                                    <div className='course-footer'>
-                                        <div className='course-author'></div>
-                                        <div className='course-time'></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div className='show-all'></div>
-                    </div>
+                    <CourseList />
+
                 </div>
             </div>
         </div>

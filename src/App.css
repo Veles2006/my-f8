@@ -49,6 +49,7 @@
 
 .sidebar__navigation {
     list-style: none;
+    
 }
 
 .sidebar__navigation--active a:first-child {
@@ -112,62 +113,4 @@
     height: calc(100vh - 66px);
 }
 
-.carousel__img {
 
-}
-
-.carousel__nav-control {
-
-}
-
-.carousel__indicators {
-
-}
-
-.course-list {
-
-}
-
-.course-list__name {
-
-}
-
-.course-list__content {
-
-}
-
-.course-item {
-
-}
-
-.course-item__img {
-
-}
-
-.course-item__info {
-
-}
-
-.course-name {
-
-}
-
-.course-price {
-
-}
-
-.course-footer {
-
-}
-
-.course-author {
-
-}
-
-.course-time {
-
-}
-
-.show-all {
-
-}
