@@ -1,3 +1,7 @@
+.wrapper {
+    padding-bottom: 74px;
+}
+
 .course-list {
     padding: 50px 44px 0 34px;
 }
@@ -64,8 +68,15 @@
 
 .course-item__img img {
     width: 100%;
-    height: 100%;
+    height: 139px;
     border-radius: 16px 16px 0 0;
+    object-fit: cover;
+}
+
+.course-item__img a {
+    position: relative;
+    display: block;
+    text-decoration: none;
 }
 
 .course-item__info {
@@ -162,4 +173,40 @@
 
 .show-all {
 
+}
+
+.video-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.video-play-wrapper {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-play-wrapper svg {
+    color: #333;
+    font-size: 13px;
+}
+
+.video-duration {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 12px;
+    border: 2px solid #fff;
+    border-radius: 999px;
 }

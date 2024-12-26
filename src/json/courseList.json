@@ -142,7 +142,7 @@
             "icon": "faClock"
         },
         {
-            "id": 1,
+            "id": 10,
             "name": "App \"Đừng Chạm Tay Lên Mặt\"",
             "image": "https://files.fullstack.edu.vn/f8-prod/courses/4/61a9e9e701506.png",
             "price": "Miễn phí",
@@ -153,17 +153,171 @@
         }
     ],
 
-    "names": [
+    "postsList": [
         {
             "id": 1,
-            "courseListName": "Khoá Học Pro",
+            "name": "Tổng hợp các sản phẩm của học viên tại F8",
+            "image": "https://files.fullstack.edu.vn/f8-prod/blog_posts/65/6139fe28a9844.png",
+            "duration": "6 phút đọc",
             "url": "/"
         },
         {
             "id": 2,
-            "courseListName": "Khoá học miễn phí",
+            "name": "[Phần 1] Tạo dự án ReactJS với Webpack và Babel",
+            "image": "https://files.fullstack.edu.vn/f8-prod/blog_posts/279/6153f692d366e.jpg",
+            "duration": "12 phút đọc",
+            "url": "/"
+        },
+        {
+            "id": 3,
+            "name": "Cách đưa code lên GitHub và tạo GitHub Pages",
+            "image": "https://files.fullstack.edu.vn/f8-prod/blog_posts/677/615436b218d0a.png",
+            "duration": "4 phút đọc",
+            "url": "/"
+        },
+        {
+            "id": 4,
+            "name": "Ký sự ngày thứ 25 học ở F8 ",
+            "image": "https://files.fullstack.edu.vn/f8-prod/blog_posts/51/6139c6453456e.png",
+            "duration": "1 phút đọc",
+            "url": "/"
+        },
+        {
+            "id": 5,
+            "name": "Các nguồn tài nguyên hữu ích cho 1 front-end developer",
+            "image": "https://files.fullstack.edu.vn/f8-prod/blog_posts/107/613a1f3685814.png",
+            "duration": "2 phút đọc",
+            "url": "/"
+        },
+        {
+            "id": 6,
+            "name": "Thời gian và Động lực",
+            "image": "https://files.fullstack.edu.vn/f8-prod/blog_posts/1671/61b6368983c16.jpg",
+            "duration": "6 phút đọc",
+            "url": "/"
+        },
+        {
+            "id": 7,
+            "name": "Tổng hợp tài liệu tự học tiếng anh cơ bản.",
+            "image": "https://files.fullstack.edu.vn/f8-prod/blog_posts/273/614043e523ad9.png",
+            "duration": "10 phút đọc",
+            "url": "/"
+        },
+        {
+            "id": 8,
+            "name": "Học như thế nào là phù hợp ?",
+            "image": "https://files.fullstack.edu.vn/f8-prod/blog_posts/791/615de64de7e8f.jpg",
+            "duration": "4 phút đọc",
+            "url": "/"
+        }
+    ],
+
+    "videosList": [
+        {
+            "id": 1,
+            "name": "Sinh viên IT đi thực tập tại doanh nghiệp cần biết những gì?",
+            "image": "https://i.ytimg.com/vi/YH-E4Y3EaT4/maxresdefault.jpg",
+            "members": "10.432",
+            "comments": "236",
+            "duration": "34:51",
+            "url": "/",
+            "icon": "faComment"
+        },
+        {
+            "id": 2,
+            "name": "Phương pháp học lập trình của Admin F8?",
+            "image": "https://i.ytimg.com/vi/DpvYHLUiZpc/maxresdefault.jpg",
+            "members": "128.626",
+            "comments": "341",
+            "duration": "24:06",
+            "url": "/",
+            "icon": "faComment"
+        },
+        {
+            "id": 3,
+            "name": "Bạn sẽ làm được gì sau khóa học?",
+            "image": "https://i.ytimg.com/vi/R6plN3FvzFY/maxresdefault.jpg",
+            "members": "1.033.886",
+            "comments": "144",
+            "duration": "03:15",
+            "url": "/",
+            "icon": "faComment"
+        },
+        {
+            "id": 4,
+            "name": "\"Code Thiếu Nhi Battle\" Tranh Giành Trà Sữa Size L",
+            "image": "https://i.ytimg.com/vi/sgq7BH6WxL8/maxresdefault.jpg",
+            "members": "280.913",
+            "comments": "181",
+            "duration": "25:10",
+            "url": "/",
+            "icon": "faComment"
+        },
+        {
+            "id": 5,
+            "name": "Javascript có thể làm được gì? Giới thiệu qua về trang F8 | Học lập trình Javascript cơ bản",
+            "image": "https://i.ytimg.com/vi/0SJE9dYdpps/maxresdefault.jpg",
+            "members": "806.355",
+            "comments": "132",
+            "duration": "07:53",
+            "url": "/",
+            "icon": "faComment"
+        },
+        {
+            "id": 6,
+            "name": "ReactJS là gì? Tại sao nên học ReactJS?",
+            "image": "https://i.ytimg.com/vi/x0fSBAgBrOQ/maxresdefault.jpg",
+            "members": "466.771",
+            "comments": "355",
+            "duration": "10:41",
+            "url": "/",
+            "icon": "faComment"
+        },
+        {
+            "id": 7,
+            "name": "Các thẻ HTML thông dụng",
+            "image": "https://i.ytimg.com/vi/AzmdwZ6e_aM/maxresdefault.jpg",
+            "members": "339.561",
+            "comments": "206",
+            "duration": "11:08",
+            "url": "/",
+            "icon": "faComment"
+        },
+        {
+            "id": 8,
+            "name": "Làm sao để có thu nhập cao và đi xa hơn trong ngành IT?",
+            "image": "https://i.ytimg.com/vi/oF7isq9IjZM/maxresdefault.jpg",
+            "members": "83.949",
+            "comments": "238",
+            "duration": "25:40",
+            "url": "/",
+            "icon": "faComment"
+        }
+    ],
+
+    "names": [
+        {
+            "id": 1,
+            "title": "Khoá Học Pro",
+            "url": "/"
+        },
+        {
+            "id": 2,
+            "title": "Khoá học miễn phí",
             "url": "/",
             "showAll": "Xem lộ trình >"
+        },
+        {
+            "id": 3,
+            "title": "Bài viết nổi bật",
+            "url": "/",
+            "showAll": "Xem tất cả >"
+        },
+        {
+            "id": 4,
+            "title": "Videos nổi bật",
+            "url": "/",
+            "showAll": "Xem tất cả >"
         }
     ]
 }
