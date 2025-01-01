@@ -1,5 +1,6 @@
-import styles from './Courses.module.css';
+import styles from './Courses.module.scss';
 import classNames from 'classnames/bind';
+                                
 
 const cx = classNames.bind(styles);
 

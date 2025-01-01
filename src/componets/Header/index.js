@@ -1,4 +1,4 @@
-import styles from './Header.module.css';
+import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
 import HeaderLeftPage from '../HeaderLeftPage';
 import HeaderCenterPage from '../HeaderCenterPage';

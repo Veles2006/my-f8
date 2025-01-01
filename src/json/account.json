@@ -1,0 +1,25 @@
+{
+    "fullName": "Linh Vương",
+    "userName": "vuonglinh1",
+    "profileLink": "/",
+    "sections": [
+        {
+            "items": [
+                { "label": "Trang cá nhân", "link": "/" }
+            ]
+        },
+        {
+            "items": [
+                { "label": "Viết blog", "link": "/" },
+                { "label": "Bài viết của tôi", "link": "/" },
+                { "label": "Bài viết đã lưu", "link": "/" }
+            ]
+        },
+        {
+            "items": [
+                { "label": "Cài đặt" },
+                { "label": "Đăng xuất" }
+            ]
+        }
+    ]
+}

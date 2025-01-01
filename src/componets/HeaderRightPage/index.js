@@ -1,52 +1,118 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
-import styles from './HeaderRightPage.module.css';
+import styles from './HeaderRightPage.module.scss';
 import Courses from '../Courses';
 import Messages from '../Messages';
+import AccountPopPup from '../AccountPopPup';
+import { useRef, useState, useEffect } from 'react';
+import classNames from 'classnames/bind';
+import avatar from '../../assets/imgs/avatar.jpg';
+
+const cx = classNames.bind(styles);
 
 function HeaderRightPage() {
-    return (
-        <div className={styles['header-right-page']}>
-            <div className={styles['my-course']}>
-                <span className={styles['my-course__text']}>Khoá học của tôi</span>
+    // State quản lý trạng thái hiển thị của pop-up
+    const [activePopup, setActivePopup] = useState(null); // null, 'courses', 'messages', hoặc 'account'
+    const popupRefs = {
+        courses: useRef(null),
+        messages: useRef(null),
+        account: useRef(null),
+    };
 
-                <div className={styles['course-pop-pup']}>
-                    <div className={styles['course-pop-pup__title']}>
-                        <h6>Khoá học của tôi</h6>
-                        <a href="/">Xem tất cả</a>
+    const togglePopup = (popupType) => {
+        setActivePopup((prev) => (prev === popupType ? null : popupType));
+    };
+
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (
+                activePopup &&
+                popupRefs[activePopup]?.current &&
+                !popupRefs[activePopup].current.contains(e.target)
+            ) {
+                setActivePopup(null);
+                console.log(123);
+            }
+        };
+
+        if (activePopup) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [activePopup]);
+
+    return (
+        <div className={cx('header-right-page')}>
+            {/* Khoá học */}
+            <div className={cx('my-course')}>
+                <span
+                    onClick={() => togglePopup('courses')}
+                    className={cx('my-course__text')}
+                >
+                    Khoá học của tôi
+                </span>
+                {activePopup === 'courses' && (
+                    <div
+                        className={cx('course-pop-pup')}
+                        ref={popupRefs.courses}
+                    >
+                        <div className={cx('course-pop-pup__title')}>
+                            <h6>Khoá học của tôi</h6>
+                            <a href="/">Xem tất cả</a>
+                        </div>
+                        <div className={cx('course-pop-pup__list-course')}>
+                            <Courses />
+                        </div>
                     </div>
-                    <div className={styles['course-pop-pup__list-course']}>
-                        <Courses />
-                    </div>
-                </div>
+                )}
             </div>
 
-            <div className={styles['my-notification-wrapper']}>
-                <div className={styles['my-notification']}>
+            {/* Thông báo */}
+            <div className={cx('my-notification-wrapper')}>
+                <div
+                    onClick={() => togglePopup('messages')}
+                    className={cx('my-notification')}
+                >
                     <FontAwesomeIcon icon={faBell} style={{ opacity: 0.5 }} />
                 </div>
-                <div className={styles['notification-pop-pup']}>
-                    <div className={styles['notification-pop-pup__title']}>
-                        <h6>Thông báo</h6>
-                        <button>Đánh dấu đã đọc</button>
+                {activePopup === 'messages' && (
+                    <div
+                        className={cx('notification-pop-pup')}
+                        ref={popupRefs.messages}
+                    >
+                        <div className={cx('notification-pop-pup__title')}>
+                            <h6>Thông báo</h6>
+                            <button>Đánh dấu đã đọc</button>
+                        </div>
+                        <div className={cx('notification-pop-pup__list-message')}>
+                            <Messages />
+                        </div>
+                        <a
+                            href="/"
+                            className={cx('notification-pop-pup__see-all')}
+                        >
+                            <span>Xem tất cả thông báo</span>
+                        </a>
                     </div>
-                    <div className={styles['notification-pop-pup__list-message']}>
-                        <Messages />
-                    </div>
-                    <a href='/' className={styles['notification-pop-pup__see-all']}>
-                        <span>Xem tất cả thông báo</span>
-                    </a>
-                </div>
+                )}
             </div>
 
-            <div className={styles['my-account']}>
-                <a href="/">
-                    <img
-                        className={styles['account-img']}
-                        src="https://i.pinimg.com/736x/42/49/72/42497225b267a7a128a8ffc720f9d198.jpg"
-                        alt="Account"
-                    />
-                </a>
+            {/* Tài khoản */}
+            <div className={cx('my-account')}>
+                <img
+                    className={cx('account-img')}
+                    src={avatar}
+                    alt="Account"
+                    onClick={() => togglePopup('account')}
+                />
+                {activePopup === 'account' && (
+                    <span ref={popupRefs.account}>
+                        <AccountPopPup />
+                    </span>
+                )}
             </div>
         </div>
     );

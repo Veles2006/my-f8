@@ -16,7 +16,6 @@
 } 
 
 .course-pop-pup {
-    display: none;
     position: absolute;
     top: 100%;
     right: 0;
@@ -24,8 +23,8 @@
     height: 470px;
     background: #fff;
     margin-top: 14px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px 2px #ded1d1;
+    border-radius: 12px;    
+    box-shadow: 0 -4px 32px #0003;
     line-height: 16px;
     padding-bottom: 8px;
     z-index: 20;
@@ -49,7 +48,7 @@
     text-decoration: none;
 }
 
-.notification-pop-pup__title a,
+.course-pop-pup__title a,
 .notification-pop-pup__title button {
     position: relative;
     top: -8px;
@@ -96,7 +95,7 @@
 }
 
 .notification-pop-pup {
-    display: none;
+    /* display: none; */
     width: 400px;
     max-height: 508px;
     position: absolute;
@@ -105,7 +104,8 @@
     background: #fff;
     margin-top: 14px;
     border-radius: 12px;
-    box-shadow: 0 0 20px 2px #ded1d1;
+    box-shadow: 0 -4px 32px #0003;
+    z-index: 29;
 }
 
 .notification-pop-pup__title button {
@@ -140,6 +140,7 @@
 
 .my-account {
     margin-left: 12px;
+    cursor: pointer;
 } 
 
 .account-img {
@@ -148,3 +149,4 @@
     height: 29px;
     border-radius: 50%;
 } 
+

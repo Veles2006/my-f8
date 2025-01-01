@@ -83,7 +83,7 @@ const Slide = styled.div`
     display: flex;
     height: 270px;
     background: ${({ background }) => background || '#ccc'};
-    border-radius: 10px;
+    border-radius: 16px;
     color: #fff;
 `;
 
